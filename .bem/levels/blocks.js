@@ -24,18 +24,17 @@ exports.getTechs = function() {
     [
         'bemhtml',
         'vanilla.js',
-        'browser.js',
         'md'
     ].forEach(getTechResolver(techs, BEMCORE_TECHS));
 
     [
+        'spec.js',
         'spec.js+browser.js+bemhtml',
         'spec.bemjson.js'
     ].forEach(getTechResolver(techs, BEMPR_TECHS));
 
     [
-        'browser.js',
-        'spec.js'
+        'browser.js'
     ].forEach(getTechResolver(techs, PRJ_TECHS));
 
     return techs;

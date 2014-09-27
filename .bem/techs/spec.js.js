@@ -2,8 +2,6 @@ var PATH = require('path'),
     BEM = require('bem'),
     Q = BEM.require('q');
 
-exports.baseTechName = '../../libs/bem-pr/bem/techs/spec.js';
-
 exports.techMixin = {
 
     getCreateResult : function(path, suffix, vars) {

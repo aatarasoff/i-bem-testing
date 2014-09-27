@@ -1,5 +1,5 @@
 var settings = require('../settings.json'),
-    environ  = require('bem-environ'),
+    environ  = require('bem-environ')(__dirname),
     path     = require('path'),
     U        = require('bem').util;
 
@@ -34,20 +34,9 @@ MAKE.decl('Arch', {
 
 MAKE.decl('SetsNode', {
 
-    /**
-     * Описание уровней-источников для сетов
-     * @returns {Object}
-     */
     getSets : function() {
         return {
             'service' : [
-                'common.blocks',
-                'design/common.blocks',
-                'service.blocks',
-                'design/service.blocks',
-                'test.blocks'
-            ],
-            'application' : [
                 'common.blocks',
                 'design/common.blocks',
                 'service.blocks',
