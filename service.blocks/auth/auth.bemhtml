@@ -1,0 +1,26 @@
+block('auth')(
+
+    js()(true),
+    
+    content()(function () {
+        return [
+            {
+                elem: 'title',
+                content: this.ctx.title
+            },
+            {
+                elem: 'form',
+                content: this.ctx.content
+            }
+        ];
+    }),
+
+    elem('form')(
+        tag()('form'),
+        attrs()({ role: 'form' })
+    ),
+
+    elem('title')(
+        tag()('h3')
+    )
+)
