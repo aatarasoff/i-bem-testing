@@ -19,3 +19,5 @@ test/libs
 /*.tests
 /*.sets
 /*.tmpl-specs
+
+public/
